@@ -20,33 +20,15 @@ class TestActivity :ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column(modifier = Modifier
-                .background(Color.Red)
-                .fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(text = "hello Android", color = Color.Blue, fontSize = 25.sp)
-                Spacer(modifier = Modifier.height(30.dp))
-                Text(text = "hello Dhananjay Pathak", color = Color.Blue, fontSize = 25.sp)
-                Box(modifier = Modifier.background(Color.Green).fillMaxWidth(), contentAlignment = Alignment.CenterEnd){
-                    Button(modifier = Modifier.padding(end = 20.dp), onClick = {
-                        Toast.makeText(applicationContext, "you have clicked on button", Toast.LENGTH_SHORT).show()
-                    }) {
-                        Text(text = "my Button ")
-                    }
-                }
-
+            Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceEvenly, horizontalAlignment =Alignment.CenterHorizontally) {
+                 Button(onClick = {
+                     Toast.makeText(applicationContext, "this is simple toast", Toast.LENGTH_SHORT).show()
+                 }) {
+                     Text(text = "My Button")
+                 }
+                Text(text = "First TV")
+                Text(text = "First TV")
             }
         }
-    }
-
-    @Preview
-    @Composable
-    fun MyComp() {
-        Text(text = "this is")
-    }
-
-    @Preview
-    @Composable
-    fun MyCompp() {
-        Text(text = "this isis the ")
     }
 }

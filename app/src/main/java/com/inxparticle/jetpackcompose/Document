@@ -1,0 +1,30 @@
+Benfit of using Compose
+
+1. Reduced Lines Of Code
+
+By writing code in one file in the app, it prevents us from going back and forth in XML
+files for reviews. If we had used XML files we would have needed a layout for the image
+view, image title and written code that links to our Viewholder in the data adapter class
+for a list view or recycler view. This implementation would lead to having two or more
+ classes and layouts.
+
+However, in Compose we built functions that easily linked these components for us. We
+used row and column boxes. Correcting bugs was easier and less
+error-prone. Testing times were straightforward as we use one code file.
+
+Application built faster and the apk generated is relatively smaller compared to
+XML apps built.
+Google confirmed that it saves time and gives better performance than other Android
+view systems.
+
+2. Requirements to develop Jetpack Compose
+
+App had to support API level –Android 5.0 Lollipop (API 21) and higher.
+
+3. Powerful
+
+Using the Material Design support in app for theming is relatively easy in Compose and
+ more enhanced.
+ We used the navigation graph to toggle between Compose screens which are merely code
+ blocks in the single code base.
+ Animations are supported and can be implemented faster with ease.
